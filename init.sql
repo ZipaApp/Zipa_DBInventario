@@ -8,6 +8,8 @@ CREATE TABLE "Producto" (
   "Prod_codigo" int UNIQUE NOT NULL,
   "Prod_nombre" varchar(50) NOT NULL,
   "Prod_tamaño" int,
+  "Prod_imagen" text[],
+  "Prod_descripcion" varchar(200),
   "Prod_precio" numeric(10,2) NOT NULL,
   "Prod_cantidad" int DEFAULT 0,
   "Cat_id" int
@@ -32,6 +34,7 @@ CREATE TABLE "Proveedor" (
   "Prov_razonSocial" varchar(50) NOT NULL,
   "Prov_nit" int UNIQUE NOT NULL,
   "Prov_responsable" varchar(70),
+  "Prov_imagen" text[],
   "Prov_correo" varchar(70),
   "Prov_telefono" varchar(20)
 );
